@@ -20,26 +20,6 @@ const little_sigma1 = (x) => {
     return (ROTR(x, 17) ^ ROTR(x, 19) ^ SHR(x, 10)) >>> 0;
 }
 
-/**
- * Osmobitni brojevi su brojevi od 0 - 255
- * 00000000 -> 0
- * 11111111 -> 255
- * 
- * 1 -> 1
- * 1 -> 2
- * 1 -> 4 
- * 1 -> 8
- * 1 -> 16
- * 1 -> 32
- * 1 -> 64
- * 1 -> 128
- * TOTAL: 255
- * 
- * U ASCII kodiranju, svako slovo (veliko ili malo slovo), 
- * broj, simbol ili kontrolni karakter predstavljeni su jednim BAJTOM, odnosno 8 BITOVA.
- */
-
-
 const message = "iguana wombat dog kangaroo llama turkey yak unicorn sheep xenoce";
 
 /**
@@ -54,8 +34,6 @@ function charToUnicodeValue(message) {
     return outputArray;
 }
 
-// Array of 64 elements. Each element is 8 bits.
-// const listOfUnicodeValues = charToUnicodeValue(message);
 const listOfUnicodeValues = new TextEncoder().encode(message);
 
 /**
