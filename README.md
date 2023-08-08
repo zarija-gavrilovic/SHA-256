@@ -1,6 +1,13 @@
 # SHA-256
-BRANCHES:
-1. 
+BRANCHES (order of implementation):
+1. `SHA-256_add_function`
+2. `SHA-256_right_rotation`
+3. `SHA-256_little_sigma_functions`
+4. `SHA-256_message_schedule`
+5. `SHA-256_big_sigma_functions`
+6. `SHA-256_round_function`
+7. `SHA-256_compress_function`
+8. `master`
 SHA-256 Implementation in javascript.
 ```
 // Add function
