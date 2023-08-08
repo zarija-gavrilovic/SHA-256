@@ -1,14 +1,10 @@
 function rightrotate32(x, n) {
-    
     // Normalizacija n na raspon od 0 do 31
     n = n % 32;
   
-    console.log(`number: ${x.toString(2)}(${x.toString(2).length}), decmial: ${x}`)
     // Rotiranje udesno
     const shiftedBits = (x >>> n);
-    console.log(`shiftedBits: ${shiftedBits.toString(2)}(${shiftedBits.toString(2).length}) decimal: ${shiftedBits}`)
     const movedBits = ((x << (32 - n)) >>> 0);
-    console.log(`movedBits: ${movedBits.toString(2)}(${movedBits.toString(2).length}) decimal: ${movedBits}`)
     
     // IMPORTANT: Convert to unsinged number!
     return (shiftedBits | movedBits) >>> 0;
